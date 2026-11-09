@@ -1,1 +1,0 @@
-Object.assign(window.VERSION_ASSETS,{"assets-2d/anellion-level9.png":"assets-2d/anellion-level9.png","assets-2d/anellion-level9-walk.png":"assets-2d/anellion-level9-walk.png"});

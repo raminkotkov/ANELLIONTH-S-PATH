@@ -1,1 +1,0 @@
-window.DeveloperMode=Object.freeze({remote:!1,enabled:!1,setEnabled:async()=>!1,authorize:async()=>!1});

@@ -1,1 +1,0 @@
-window.BEDROOM_QUESTS.forEach((i,o)=>i.forEach((i,E)=>{i.id=`item-${o}-quest-${E}`,i.questions.forEach((o,E)=>{o.id=`${i.id}-question-${E}`})}));
