@@ -1,0 +1,1 @@
+Object.assign(window.VERSION_ASSETS,{"assets-2d/anellion-level8-walk.png":"assets-2d/anellion-level8-walk.png"});

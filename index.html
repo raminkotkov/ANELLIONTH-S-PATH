@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Путь Анеллиона</title>
+<meta name="game-version" content="2026.10.28-r2">
+<!-- Правила и состояние: ../GAME_RULES_RU.md. Обновление версии сохраняет ключ прохождения. -->
+<link rel="stylesheet" href="frontend/css/game-1.css">
+<link rel="stylesheet" href="frontend/css/game-2.css">
+<link rel="stylesheet" href="frontend/css/game-3.css">
+<link rel="stylesheet" href="frontend/css/game-4.css">
+<link rel="stylesheet" href="frontend/css/game-5.css">
+<script type="application/x-anellion-module" data-module="frontend/js/sound-effects.js"></script>
+
+<script type="application/x-anellion-module" data-module="frontend/js/tutorial-guard.js"></script>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#302619">
+<link rel="stylesheet" href="frontend/css/account.css">
+</head>
+<body>
+<div id="anellion-loading" role="status" aria-live="polite">Загружаем игру…</div>
+<script type="application/x-anellion-module" data-module="frontend/js/save-schema.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/storage.js"></script>
+
+
+
+<script type="application/x-anellion-module" data-module="frontend/js/translations.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/i18n.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/settings-state.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/story.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/prologue.js"></script>
+<main>
+<header><h1>Путь Анеллиона</h1></header>
+<div class="game-hud" aria-label="Состояние героя и Империи"></div>
+<div class="journey-info"></div>
+<nav aria-label="Локации">
+<button data-scene="0" aria-pressed="true">Спальня</button>
+<button data-scene="1" aria-pressed="false">Кабинет</button>
+<button data-scene="2" aria-pressed="false">Площадь</button>
+<button data-scene="3" aria-pressed="false">Столовая</button>
+<button data-scene="4" aria-pressed="false">🔒 Консильерг</button>
+<button data-scene="5" aria-pressed="false" hidden>🔒 Сельскохозяйственные поля</button>
+<button data-scene="6" aria-pressed="false" hidden>🔒 Казна и склад</button>
+<button data-scene="7" aria-pressed="false" hidden>🔒 Лесопилка</button>
+<button data-scene="8" aria-pressed="false" hidden>🔒 Военный лагерь</button>
+<button data-scene="9" aria-pressed="false" hidden>🔒 Шахта</button>
+</nav>
+<div class="world-viewport"><div class="stage">
+<canvas width="1440" height="720" tabindex="0" aria-label="Анеллион в спальне. Стрелки влево и вправо — движение."></canvas>
+<div class="locked" hidden><div class="lock-card"><svg viewBox="0 0 32 40" fill="none" aria-hidden="true"><path d="M8 18V11a8 8 0 0 1 16 0v7" stroke="#e2bd75" stroke-width="3"/><rect x="3" y="17" width="26" height="20" rx="4" fill="#a77d3b"/><circle cx="16" cy="25" r="3" fill="#292116"/><path d="M16 26v5" stroke="#292116" stroke-width="3"/></svg><div><strong>Консильерг закрыт</strong><p>Доступ появится после испытания на 5-м уровне Империи.</p></div></div></div>
+</div></div>
+<p class="status" role="status" aria-live="polite">Загружаем выбранные локации…</p>
+<div class="controls" aria-label="Движение"><button data-direction="left" aria-label="Идти влево" disabled>←</button><button data-direction="right" aria-label="Идти вправо" disabled>→</button></div>
+</main>
+
+<script type="application/x-anellion-module" data-module="frontend/js/assets-base.js"></script>
+
+
+<script type="application/x-anellion-module" data-module="frontend/js/assets-backgrounds.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/questions-base.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/questions-fields.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/questions-treasury.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/questions-level8.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/questions-level9.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/content-ids.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/developer.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/rules.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/quests.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/hud.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/assets-hero4.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/assets-hero2.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/assets-hero6.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/assets-hero8.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/assets-hero8-walk.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/assets-hero9.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/assets-hero10.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/world.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/consilyerg-questions.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/consilyerg.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/owl-questions.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/owl.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/music.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/settings.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/viewport.js"></script>
+
+<script type="application/x-anellion-module" data-module="frontend/js/tutorial.js"></script>
+
+
+<script type="application/x-anellion-module" data-module="frontend/js/account.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/offline.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/developer-ui.js"></script>
+<script type="application/x-anellion-module" data-module="frontend/js/developer-xp.js"></script>
+<script src="media-map.js"></script>
+<script src="frontend/js/boot.js" defer></script>
+</body>
+</html>

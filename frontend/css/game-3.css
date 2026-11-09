@@ -1,0 +1,34 @@
+
+/* Full-screen controls around a static, fully visible 2:1 room. */
+html,body{width:100%;height:100%;overflow:hidden;overscroll-behavior:none}
+body{display:block;background:#171511}
+body>main{position:relative;width:100%;height:100dvh;padding:0;overflow:hidden;isolation:isolate}
+main>header{position:absolute;z-index:12;top:max(12px,env(safe-area-inset-top));left:max(16px,env(safe-area-inset-left));margin:0;pointer-events:none}
+main>header h1{font-size:19px;text-shadow:0 2px 8px #000}
+.world-viewport{position:absolute;inset:0;overflow:hidden;background:#241f18;z-index:0}
+.world-viewport>.stage{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:0;box-shadow:none;overflow:hidden}
+.stage>canvas{width:100%;height:100%;aspect-ratio:auto}
+main>.game-hud{position:absolute;top:54px;left:max(16px,env(safe-area-inset-left));z-index:10;width:min(620px,calc(100% - 32px));display:grid;grid-template-columns:1fr 1fr .7fr;gap:6px;margin:0;pointer-events:none}
+.game-hud .growth-card{padding:8px 10px;border-radius:9px;background:#191a18d9;border-color:#b99a5e66;backdrop-filter:blur(12px);box-shadow:0 3px 12px #0003}
+.game-hud .growth-heading{gap:5px}.game-hud .growth-heading h2{font:500 13px system-ui,sans-serif}.game-hud .growth-icon{display:none}
+.game-hud .level-pill{font-size:9px;padding:2px 5px}.game-hud .xp-caption{display:flex;margin:6px 0 4px;font-size:10px}.game-hud .xp-track{height:4px}
+.game-hud .energy-card{grid-column:auto;display:block}.game-hud .energy-card .growth-heading{min-width:0}.game-hud .energy-charges{margin:5px 0 0;gap:4px}.game-hud .energy-charges span{width:20px;height:20px;font-size:17px;border-radius:4px}.game-hud .energy-infinity{font-size:25px;margin:2px 0 0;line-height:1}
+main>.journey-info{position:absolute;right:max(12px,env(safe-area-inset-right));top:max(9px,env(safe-area-inset-top));z-index:15;margin:0;padding:0}
+.journey-info .faq-button{margin:0;min-height:40px;padding:8px 14px;border:1px solid #efc77c;border-radius:9px;background:#302718ed;color:#ffe1a7;font-size:13px;font-weight:600;box-shadow:0 3px 15px #0006}
+main>nav{position:absolute;z-index:10;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));display:flex;flex-wrap:nowrap;gap:6px;margin:0;overflow-x:auto;padding:4px 0;scrollbar-width:thin}
+main>nav button{flex:0 0 auto;min-height:40px;padding:8px 12px;font-size:12px;background:#1d1b16e8;backdrop-filter:blur(10px)}
+main>.controls{position:absolute;z-index:11;left:max(14px,env(safe-area-inset-left));bottom:calc(68px + env(safe-area-inset-bottom));gap:10px}
+main>.controls button{width:74px;height:68px;border-radius:16px;background:#191b19bb;backdrop-filter:blur(8px);border-color:#d4bd8a99;font-size:27px;touch-action:none;-webkit-user-select:none}
+main>.status{position:absolute;z-index:9;right:16px;bottom:calc(76px + env(safe-area-inset-bottom));margin:0;max-width:45%;font-size:12px;padding:6px 10px;border-radius:8px;background:#171813ba;text-shadow:0 1px 4px #000;pointer-events:none}
+.stage>.window-prompt{position:fixed;left:50%;bottom:calc(78px + env(safe-area-inset-bottom));z-index:12;max-width:calc(100vw - 200px);white-space:normal;text-align:center;font-size:13px;padding:10px 13px;min-height:44px}
+.stage>.locked{position:fixed;inset:130px 0 auto;padding:0;z-index:4}
+.quest-dialog{max-height:calc(100dvh - 24px);overscroll-behavior:contain}
+@media(max-width:600px){
+ main>header h1{font-size:16px}main>header{left:12px;top:max(17px,env(safe-area-inset-top))}
+ main>.game-hud{top:62px;left:10px;width:calc(100% - 20px);gap:5px;grid-template-columns:1fr 1fr .68fr}
+ .game-hud .growth-card{padding:7px}.game-hud .growth-heading{gap:3px;flex-wrap:wrap}.game-hud .growth-heading h2{font-size:11px}.game-hud .level-pill{font-size:8px;margin-left:auto;padding:2px 4px}.game-hud .xp-caption{font-size:9px}
+ .journey-info .faq-button{font-size:12px;padding:8px 10px}
+ main>.status{font-size:10px;bottom:136px;right:10px;max-width:70%}
+ .stage>.window-prompt{left:auto;right:12px;transform:none;max-width:calc(100vw - 195px);bottom:calc(75px + env(safe-area-inset-bottom));font-size:12px}
+}
+@media(max-height:500px){main>.game-hud{top:48px;width:min(480px,calc(100% - 150px))}.game-hud .growth-card{padding:5px 8px}.game-hud .xp-caption{margin-top:3px}.game-hud .energy-infinity{font-size:20px}main>.controls{bottom:60px}main>.controls button{height:58px;width:68px}.stage>.window-prompt{bottom:65px}.stage>.locked{inset:105px 0 auto}}

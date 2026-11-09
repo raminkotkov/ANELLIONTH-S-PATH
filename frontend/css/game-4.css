@@ -1,0 +1,14 @@
+
+/* Original warm palette, with the current compact layout retained. */
+body{background:radial-gradient(ellipse at top,#342b20,#171511 70%)}
+.world-viewport{background:radial-gradient(ellipse at top,#342b20,#171511 70%)}
+main>.game-hud .growth-card{background:linear-gradient(145deg,#3d3122,#251f18);border-color:#665239;backdrop-filter:none;box-shadow:inset 0 1px #e8c68b0c}
+.game-hud .growth-heading h2{color:#eee3cf}.game-hud .level-pill{border-color:#7a6240;color:#e2c89b}
+.game-hud .xp-caption{color:#cbbb9f}.game-hud .xp-track{background:#15130f;border-color:#645034}
+.game-hud .xp-track>span{background:linear-gradient(90deg,#a16b35,#e1b970)}
+.game-hud .hero-growth .xp-track>span{background:linear-gradient(90deg,#638a82,#b7d2bb)}
+.journey-info .faq-button{background:#2e281f;color:#e9ddc6;border-color:#c19a62;box-shadow:0 3px 12px #0003}
+main>nav button,main>.controls button{background:#2e281f;color:#e9ddc6;border-color:#62513a;backdrop-filter:none;box-shadow:none}
+main>nav button:hover,main>.controls button:hover,.journey-info .faq-button:hover{background:#443725}
+main>nav button[aria-pressed=true]{background:#6b4c2b;border-color:#c19a62;color:#fff3da}
+main>.status{background:#342b20;color:#c9bda6}

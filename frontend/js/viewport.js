@@ -1,0 +1,1 @@
+(()=>{const e=document.querySelector(".world-viewport"),t=e.querySelector(".stage");let l=0,i=0,o=0;function r(){l=e.clientWidth,i=e.clientHeight,o=Math.min(l,2*i),t.style.width=o+"px",t.style.height=o/2+"px",t.style.left=(l-o)/2+"px",t.style.top=(i-o/2)/2+"px"}new ResizeObserver(r).observe(e),r()})();
